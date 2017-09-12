@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Track Events For StackOverflow Website",
+  "description": "Capture events of the website to track user behaviour",
+  "version": "1.0",
+  "background": {
+    "scripts": ["jquery-3.2.1.js","background.js"]
+  },  
+  
+  "permissions": [
+    "activeTab",
+    "https://*.stackoverflow.com/",
+    "http://localhost/*",
+    "cookies"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/*"],
+      "js": ["jquery-3.2.1.js","content.js"]
+    }
+  ]
+}

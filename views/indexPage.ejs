@@ -1,0 +1,35 @@
+<html>
+<link rel="stylesheet" href="cssFiles/style.css">
+<body>
+
+<h1>Assignment -1 <br>
+Web pages with behavior logging services</h1>
+
+<p><h2> User Login Page</h2>
+
+<form action="/loginCheck" method="post">
+  
+  <div class="errorClass">
+			<label id="errorLabel" name="errorLabel" class="errorIp" size='10'><%= ERRORMSG %></label>
+		</div>
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uName" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pwd" required>
+        
+    <button type="submit">Login</button>
+  </div>
+  
+</form>
+
+<form action="/createAccount" >
+<div class="container" >
+<label><b>Dont have an account yet? Create one </b></label>
+    <button type="submit">Create New Account </button>
+ </div>
+ </form>
+</body>
+</html>

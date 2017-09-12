@@ -1,0 +1,14 @@
+{
+  "name": "AdaptiveWeb_Assignment_1",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ejs": "*",
+    "express": "3.2.6",
+    "jsonfile": "^3.0.1",
+    "node-datetime": "^2.0.3"
+  }
+}

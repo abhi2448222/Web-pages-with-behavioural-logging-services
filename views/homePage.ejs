@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>USER LOGIN</title>
+<link rel="stylesheet" href="cssFiles/style.css">
+</head>
+
+<header>
+	<h1>  Home Page</h1>
+</header>
+
+<div class="containerNew">
+	<form action="https://stackoverflow.com/questions/tagged/java" target="_blank">
+		<script type="text/javascript">
+			function openWebsite() {
+				var userName = document.forms[1].userName.value;
+				document.cookie = "userName="+userName;	
+			}
+		</script>
+		<p>
+			<input type="submit" value="Click here to visit StackOverFlow" onclick="return openWebsite();" />		
+		</p>
+	</form>
+</div>	
+
+<div class="containerNew">
+	<form action="/handleLogout" method="post">
+		<script type="text/javascript">
+			function signOut() {
+				var cookieName="userName";
+				document.cookie = cookieName + '=; expires=Mon, 01 May 2017 13:13:13 GMT;';
+				//alert("userName Cookie deleted successfully ");	
+			}
+		</script>
+	<div class="container" 	>
+		<input type="submit" value="Logout" onclick="return signOut();" />
+	</div>
+			
+	<input id="userName" type="hidden" name="userName" value="<%= USERNAME %>" ></input>
+					
+	<p>
+	   <h2><b>Welcome <%= USERNAME %></b></h2>
+		<h4>User Login History : </h4>
+		<p>
+		<pre>
+<%= LOGINHISTORY %>
+		</pre>
+		<p>
+		<h4>Behaviour Logs History : </h4>
+		<pre>
+<%= BEHAVIOURHISTORY %>
+		</pre>
+	</form>
+</div>
+</body>
+</html>
